@@ -5,12 +5,13 @@
 
     - name: Check file exist or not.
       shell: test -f /etc/apt/sources.list.d/cloudarchive-juno.list
+      ignore_errors: yes
       register: file
-      failed_when: False 
-      
+
     - name: Create a file 
       file: path=/etc/apt/sources.list.d/cloudarchive-juno.list state=touch mode="u=rw,g=r,o=r"
-     
+      when: file.rc != 0
+    
     - name: Append a line  
       lineinfile: dest=/etc/apt/sources.list.d/cloudarchive-juno.list line="deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/juno main"
     
