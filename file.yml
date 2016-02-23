@@ -1,0 +1,16 @@
+---
+- hosts:  all
+  remote_user: root
+  tasks:
+
+    - name: Check file exist or not.
+      shell: test -f /etc/apt/sources.list.d/cloudarchive-juno.list
+      register: file
+      failed_when: False 
+      
+    - name: Create a file 
+      file: path=/etc/apt/sources.list.d/cloudarchive-juno.list state=touch mode="u=rw,g=r,o=r"
+     
+    - name: Append a line  
+      lineinfile: dest=/etc/apt/sources.list.d/cloudarchive-juno.list line="deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/juno main"
+    

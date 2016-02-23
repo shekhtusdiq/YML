@@ -1,0 +1,17 @@
+---
+
+ - hosts: localhost
+
+
+   tasks:
+      - name: Check file exist
+        shell: test -f /etc/sudoers
+        ignore_errors: yes
+        register: FILE_C
+      
+      - name: Debug Variable
+        debug: var=FILE_C
+      
+      - name: If file exist do'not run the below command
+        command: ls -l
+        when: FILE_C.rc != 0

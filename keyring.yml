@@ -1,0 +1,50 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+ 
+  - name: Keyring Installation
+    apt: name=ubuntu-cloud-keyring state=present
+  
+  - name: Rebbit MQ Server
+    apt: name=rabbitmq-server state=present
+  
+  - name: Ptyhon Passlib for Capturing password
+    apt: name=python-passlib state=present
+  
+  - name: Adding guest User for Rebbit MQ Server
+    command: rabbitmqctl change_password guest password
+  
+  - name: Installling MySQL Server & Python-MySQLdb  
+    apt: name=python-mysqldb state=present
+           
+  - name: Installing MySQL Server
+    apt: name=mysql-server state=present 
+ 
+  - name: Copy Template
+    copy: src=/etc/ansible/roles/templates/.my.cnf  dest=/etc/.my.cnf owner=root mode=0644        
+  
+  - name: Copy sysctl.conf
+    copy: src=/etc/ansible/roles/templates/sysctl.conf dest=/etc/sysctl.conf owner=root group=root mode=0644 backup=yes
+  
+  - name: Load values to Kernal
+    command: sysctl -p
+ 
+  - name: Install Keystone
+    apt: name=keystone state=present   
+
+  - name: Create Database
+    mysql_db: name=keystone state=present
+
+
+
+
+#  vars_prompt:
+#  - name: "user_password"    
+#    prompt: "Enter a password for the user"    
+#    private: yes    
+#    encrypt: "md5_crypt" #need to have python-passlib installed in local machine before we can use it    
+#    confirm: yes    
+#    salt_size: 7
+
+#  - name: "add new user" user: name="{{user_name}}" comment="{{description_user}}" password="{{user_password}}" home="{{home_dir}}" shell="/bin/bash"

@@ -1,0 +1,32 @@
+---
+- hosts:  all
+  remote_user: root
+  tasks:
+#   - name: Check cloudarchive-juno.list exist or not
+#     stat: path=/etc/apt/sources.list.d/cloudarchive-juno.list
+#     register: stat_result
+#     when: stat_result.error = False
+#     copy: content= "deb http://ubuntu-cloud.archive.canonical.com/ubuntu  trusty-updates/juno main " dest=/etc/apt/sources.list.d/cloudarchive-juno.list force=no
+#   - name: Copy the template
+
+#   - file: path=/etc/apt/sources.list.d/cloudarchive-juno.list state=touch mode="u=rw,g=r,o=r"
+#
+#   ---
+    - stat: path=/etc/apt/sources.list.d/cloudarchive-juno.list
+      register: result
+      when: result=failed
+    - file: path=/etc/apt/sources.list.d/cloudarchive-juno.list state=touch mode="u=rw,g=r,o=r"
+    - lineinfile: dest=/etc/apt/sources.list.d/cloudarchive-juno.list line="deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/juno main"
+
+#   - name: Check File Exist
+#     stat: path=/etc/apt/sources.list.d/cloudarchive-juno.list
+#    register: result
+#     ignore_errors: yes
+#
+#  - name: Define Variable 
+#     set_fact:
+#       exists: "{{ result.stdout }}"
+#       when: result.stdout==/etc/apt/sources.list.d/cloudarchive-juno.list
+#
+#   - file: path=/etc/apt/sources.list.d/cloudarchive-juno.list state=touch mode="u=rw,g=r,o=r"
+#   - lineinfile: dest=/etc/apt/sources.list.d/cloudarchive-juno.list line="deb http://ubuntu-cloud.archive.canonical.com/ubuntu trusty-updates/juno main"
