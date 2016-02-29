@@ -1,0 +1,9 @@
+---
+- hosts: 192.168.56.111
+  remote_user: root
+  gather_facts: True
+  tasks:
+
+  - name: Capture Defaulte gateway
+    template: src=/etc/ansible/roles/common/templates/TEST.j2 dest=/root/TEST.cfg
+ 
