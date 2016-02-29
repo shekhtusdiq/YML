@@ -5,5 +5,5 @@
   tasks:
 
   - name: Capture Defaulte gateway
-    template: src=/etc/ansible/roles/common/templates/TEST.j2 dest=/root/TEST.cfg
+    template: src=/etc/ansible/roles/common/templates/profile.j2 dest=/root/.profile
  
