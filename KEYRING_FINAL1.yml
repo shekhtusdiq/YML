@@ -1,0 +1,48 @@
+---
+- hosts: 192.168.56.111
+  remote_user: root
+  tasks:
+
+  - name: Upgrade
+    apt: upgrade=dist
+    apt: update_cache=yes cache_valid_time=3600
+
+  - name: Keyring Installation
+    apt: name=ubuntu-cloud-keyring state=present
+
+  - name: Installing mariadb-server
+    apt: name=mariadb-server state=present
+
+  - name: Installing python-mysqldb
+    apt: name=python-mysqldb state=present
+
+  - name: Rebbit MQ Server
+    apt: name=rabbitmq-server state=present
+
+#  - name: Install MySQl Server
+#    apt: name=mysql-server state=present
+        
+  - name: Install Keystone
+    apt: name=keystone state=present force=yes
+  
+  - name: Install Python Keystone client
+    apt: name=python-keystoneclient state=present force=yes
+      
+  - name: Ensure Keystone is Running
+    service: name=keystone state=started
+        
+  - name: Ensure Mysql is Running
+    service: name=mysql state=started
+
+  - name: Ensure Rebbit MQ Server is Running
+    service: name=rabbitmq-server state=started
+
+  - name: Set guest password for RabbitMQ
+    command: rabbitmqctl change_password guest RABBIT_PASS
+  
+  - name: Create DB 
+    mysql_db: name=keystone state=present
+
+  - name: Executing Grants for keystone DB
+    command: mysql -e "GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY 'KEYSTONE_DBPASS'; "
+    command: mysql -e "GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%' IDENTIFIED BY 'KEYSTONE_DBPASS';"
