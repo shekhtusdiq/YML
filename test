@@ -1,0 +1,27 @@
+
+# https://wiki.web.att.com/pages/viewpage.action?pageId=453805120
+
+# /etc/neutron.conf on all controller and network nodes
+max_l3_agents_per_router=3
+min_l3_agents_per_router=2
+l3_ha_net_cidr=169.254.192.0/18
+
+
+# On each idc-lcp-vrouter (Network nodes) , configure neutron-l3-agent related parameters as below
+
+#"ha_confs_path" : Directory in which all HA router related information is stored by neutron L3 agent and Keepalived process. For each router, a directory is created that has name similar to it's id.
+#"ha_vrrp_auth_type" : VRRP authentication type
+#"ha_vrrp_auth_password": Authentication password for VRRP
+#"ha_vrrp_advert_int" : Interval after which to send VRRP advertisements between nodes.
+
+ha_confs_path="give/appropriate/path"
+ha_vrrp_auth_type=PASS
+ha_vrrp_auth_password=super_secret
+ha_vrrp_advert_int=3
+
+
+# Following is the configuration for l3-agent pinning:
+# tag-l3-agent-pinning <l3-agent1-uuid> <tenant1-ID>,<tenant2-ID>...
+# tag-l3-agent-pinning <l3-agent2-uuid> <tenant1-ID>,<tenant2-ID>...
+tag-l3-agent-pinning 39652f3d-7f25-4f14-b893-8047be8ff774 f34e7cb6d38943f7987d987251bc0908 eab12be2f2774ccf86d57a948fbeadd3
+tag-l3-agent-pinning 39652f3d-7f25-4f14-b893-8047be8ff774 f34e7cb6d38943f7987d987251bc0908 eab12be2f2774ccf86d57a948fbeadd3 eab12be2f2774ccf86d57a948fbeadd3

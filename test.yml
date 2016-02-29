@@ -5,7 +5,7 @@
 
    tasks:
       - name: check whether the file exists
-        shell: ls -l /etc/conf ; echo $?
+        shell: ls -l /etc/conff ; echo $?
         
        #shell: ls -l /etc/conf 1>/dev/null 2>1; echo $?
         register: FILE_C

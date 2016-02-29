@@ -1,0 +1,365 @@
+192.168.56.111 | success >> {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.56.111", 
+            "192.168.56.110", 
+            "10.0.4.15"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::a00:27ff:feae:4a36", 
+            "fe80::a00:27ff:fe95:5fa3", 
+            "fe80::a00:27ff:fe36:fe76"
+        ], 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "12/01/2006", 
+        "ansible_bios_version": "VirtualBox", 
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-3.19.0-25-generic", 
+            "ro": true, 
+            "root": "UUID=1cef75bb-f6d6-44f5-92d0-c6f41981a732"
+        }, 
+        "ansible_date_time": {
+            "date": "2016-02-29", 
+            "day": "29", 
+            "epoch": "1456760310", 
+            "hour": "21", 
+            "iso8601": "2016-02-29T15:38:30Z", 
+            "iso8601_micro": "2016-02-29T15:38:30.633675Z", 
+            "minute": "08", 
+            "month": "02", 
+            "second": "30", 
+            "time": "21:08:30", 
+            "tz": "IST", 
+            "tz_offset": "+0530", 
+            "weekday": "Monday", 
+            "year": "2016"
+        }, 
+        "ansible_default_ipv4": {
+            "address": "10.0.4.15", 
+            "alias": "eth2", 
+            "gateway": "10.0.4.2", 
+            "interface": "eth2", 
+            "macaddress": "08:00:27:36:fe:76", 
+            "mtu": 1500, 
+            "netmask": "255.255.255.0", 
+            "network": "10.0.4.0", 
+            "type": "ether"
+        }, 
+        "ansible_default_ipv6": {}, 
+        "ansible_devices": {
+            "sda": {
+                "holders": [], 
+                "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sda1": {
+                        "sectors": "497664", 
+                        "sectorsize": 512, 
+                        "size": "243.00 MB", 
+                        "start": "2048"
+                    }, 
+                    "sda2": {
+                        "sectors": "2", 
+                        "sectorsize": 512, 
+                        "size": "1.00 KB", 
+                        "start": "501758"
+                    }, 
+                    "sda5": {
+                        "sectors": "9981952", 
+                        "sectorsize": 512, 
+                        "size": "4.76 GB", 
+                        "start": "501760"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "scheduler_mode": "deadline", 
+                "sectors": "10485760", 
+                "sectorsize": "512", 
+                "size": "5.00 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA"
+            }, 
+            "sdb": {
+                "holders": [], 
+                "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sdb1": {
+                        "sectors": "8386560", 
+                        "sectorsize": 512, 
+                        "size": "4.00 GB", 
+                        "start": "2048"
+                    }, 
+                    "sdb2": {
+                        "sectors": "2", 
+                        "sectorsize": 512, 
+                        "size": "1.00 KB", 
+                        "start": "8390654"
+                    }, 
+                    "sdb5": {
+                        "sectors": "8384512", 
+                        "sectorsize": 512, 
+                        "size": "4.00 GB", 
+                        "start": "8390656"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "scheduler_mode": "deadline", 
+                "sectors": "16777216", 
+                "sectorsize": "512", 
+                "size": "8.00 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA"
+            }, 
+            "sdc": {
+                "holders": [], 
+                "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sdc1": {
+                        "sectors": "204800", 
+                        "sectorsize": 512, 
+                        "size": "100.00 MB", 
+                        "start": "2048"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "scheduler_mode": "deadline", 
+                "sectors": "2097152", 
+                "sectorsize": "512", 
+                "size": "1.00 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA"
+            }, 
+            "sdd": {
+                "holders": [], 
+                "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)", 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sdd1": {
+                        "sectors": "21163904", 
+                        "sectorsize": 512, 
+                        "size": "10.09 GB", 
+                        "start": "2048"
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "scheduler_mode": "deadline", 
+                "sectors": "21165952", 
+                "sectorsize": "512", 
+                "size": "10.09 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA"
+            }, 
+            "sr0": {
+                "holders": [], 
+                "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", 
+                "model": "CD-ROM", 
+                "partitions": {}, 
+                "removable": "1", 
+                "rotational": "1", 
+                "scheduler_mode": "deadline", 
+                "sectors": "2097151", 
+                "sectorsize": "512", 
+                "size": "1024.00 MB", 
+                "support_discard": "0", 
+                "vendor": "VBOX"
+            }
+        }, 
+        "ansible_distribution": "Ubuntu", 
+        "ansible_distribution_major_version": "14", 
+        "ansible_distribution_release": "trusty", 
+        "ansible_distribution_version": "14.04", 
+        "ansible_domain": "", 
+        "ansible_env": {
+            "HOME": "/root", 
+            "LANG": "C", 
+            "LC_CTYPE": "C", 
+            "LOGNAME": "root", 
+            "MAIL": "/var/mail/root", 
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games", 
+            "PWD": "/root", 
+            "SHELL": "/bin/bash", 
+            "SHLVL": "1", 
+            "SSH_CLIENT": "192.168.56.103 51057 22", 
+            "SSH_CONNECTION": "192.168.56.103 51057 192.168.56.111 22", 
+            "USER": "root", 
+            "XDG_RUNTIME_DIR": "/run/user/0", 
+            "XDG_SESSION_ID": "103", 
+            "_": "/bin/sh"
+        }, 
+        "ansible_eth0": {
+            "active": true, 
+            "device": "eth0", 
+            "ipv4": {
+                "address": "192.168.56.111", 
+                "netmask": "255.255.255.0", 
+                "network": "192.168.56.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:feae:4a36", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:ae:4a:36", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_eth1": {
+            "active": true, 
+            "device": "eth1", 
+            "ipv4": {
+                "address": "192.168.56.110", 
+                "netmask": "255.255.255.0", 
+                "network": "192.168.56.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fe95:5fa3", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:95:5f:a3", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_eth2": {
+            "active": true, 
+            "device": "eth2", 
+            "ipv4": {
+                "address": "10.0.4.15", 
+                "netmask": "255.255.255.0", 
+                "network": "10.0.4.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fe36:fe76", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:36:fe:76", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "promisc": false, 
+            "type": "ether"
+        }, 
+        "ansible_fips": false, 
+        "ansible_form_factor": "Other", 
+        "ansible_fqdn": "controller", 
+        "ansible_hostname": "controller", 
+        "ansible_interfaces": [
+            "lo", 
+            "eth2", 
+            "eth1", 
+            "eth0"
+        ], 
+        "ansible_kernel": "3.19.0-25-generic", 
+        "ansible_lo": {
+            "active": true, 
+            "device": "lo", 
+            "ipv4": {
+                "address": "127.0.0.1", 
+                "netmask": "255.0.0.0", 
+                "network": "127.0.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "::1", 
+                    "prefix": "128", 
+                    "scope": "host"
+                }
+            ], 
+            "mtu": 65536, 
+            "promisc": false, 
+            "type": "loopback"
+        }, 
+        "ansible_lsb": {
+            "codename": "trusty", 
+            "description": "Ubuntu 14.04.3 LTS", 
+            "id": "Ubuntu", 
+            "major_release": "14", 
+            "release": "14.04"
+        }, 
+        "ansible_machine": "x86_64", 
+        "ansible_machine_id": "2bf8e99fb881a9041a10aa6e56ce984f", 
+        "ansible_memfree_mb": 2764, 
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 3653, 
+                "used": 299
+            }, 
+            "real": {
+                "free": 2764, 
+                "total": 3952, 
+                "used": 1188
+            }, 
+            "swap": {
+                "cached": 0, 
+                "free": 4093, 
+                "total": 4093, 
+                "used": 0
+            }
+        }, 
+        "ansible_memtotal_mb": 3952, 
+        "ansible_mounts": [
+            {
+                "device": "/dev/sdb1", 
+                "fstype": "ext4", 
+                "mount": "/", 
+                "options": "rw,errors=remount-ro", 
+                "size_available": 2234281984, 
+                "size_total": 4159373312, 
+                "uuid": "1cef75bb-f6d6-44f5-92d0-c6f41981a732"
+            }
+        ], 
+        "ansible_nodename": "controller", 
+        "ansible_os_family": "Debian", 
+        "ansible_pkg_mgr": "apt", 
+        "ansible_processor": [
+            "GenuineIntel", 
+            "Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz"
+        ], 
+        "ansible_processor_cores": 1, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 1, 
+        "ansible_product_name": "VirtualBox", 
+        "ansible_product_serial": "0", 
+        "ansible_product_uuid": "AC06D6A7-5F75-4D5E-B1CA-E13165ED95F4", 
+        "ansible_product_version": "1.2", 
+        "ansible_python_version": "2.7.6", 
+        "ansible_selinux": false, 
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAMg2ssYRUoKhJa8pHIjKIyRX/4/1PHaCRTXz7a5pO/kuvR0jlkimHb/oGuNKT1+DpP31fRApGC6KPhBHweYn6K2XMiKzBf1y35Q0ov/t9i6qDENxp5VmWN/H6nYWdIirxehB2Vy+PUFYsqxc6TFlYrtKWvwf2d1Xzw/XcWVX8eYPAAAAFQDYkk/xr6jPFy8/X8vVbd2VVIBqFwAAAIEAtEWKqzuXq2TeNJ4eNk/p6YdFCEqZv5mnCyxJdh5Yx3BkhEkMTPuoE0mapP+w0QdWNapdFXCzOQgkj9rorjRd1LcvBLVuIh8vdSO4cq01AhjNgr6mmL+W54yAHJw7w6qUnvWCBSj/4nRhs4D4lfk54dtaVukFufgp08tQfB1iebEAAACAYjMh6fNvnuYIqHYKB7hAHfQf0iMdt1Nh2HJ5O+Ajb0S2m2i+qQsV7FHz4z6zA4wjfomkOaKRj8H1hsNXzdPMIgQVCV0s78/BpH1+PCQEB205rni996g7Ahvyt9K/vRq6HEDq41EazSHminvJWJiZlwiaVIdCqnG253qsc3m4m9E=", 
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFyc6kxvKbGp7VxNx5tLLA57y5UhsW3jJg+rkVOgTPhQULzbQJYsNdIhcfnQuSIz1qhafKF4FhiHRMHr1KbfuSo=", 
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDPiprbb95g1e107atGMweCy113rRZsBKP8x8oPHyHGKPzb6EBWSb2TcbgaEtWfSbLolQq3aw90m7uH4vLtXl66x0f4ytqisFfTX77rKL5bozZUE0Y/eZXsgH2UowXufmYcNAwHK/JaPpzqi33Buj0IEpEP0TdQGHVsL486T16e1m4c8pq1T1m5ChNMxJUqI9zAD/awAXy9o8NWqNKh9G6jxfeuLyBvOLb5XYgQXLEdaXPywS13vAvroV7gtqaZMsaabCYY5gSxX+oYqPHsmP1osClBaTC3Z4VoVB5qW1fQzi2GEsQYeCTgOO5QCN2axySFYSTSpT2Tfj6lnI//I7BP", 
+        "ansible_swapfree_mb": 4093, 
+        "ansible_swaptotal_mb": 4093, 
+        "ansible_system": "Linux", 
+        "ansible_system_vendor": "innotek GmbH", 
+        "ansible_user_dir": "/root", 
+        "ansible_user_gecos": "root", 
+        "ansible_user_gid": 0, 
+        "ansible_user_id": "root", 
+        "ansible_user_shell": "/bin/bash", 
+        "ansible_user_uid": 0, 
+        "ansible_userspace_architecture": "x86_64", 
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "virtualbox", 
+        "module_setup": true
+    }, 
+    "changed": false
+}
+

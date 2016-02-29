@@ -1,0 +1,29 @@
+---
+#- hosts: localhost
+#  remote_user: root
+
+#  tasks:
+#  - action: shell echo {{item}}
+#    with_items:
+#    - 1 
+#    - 2 
+#    register: task
+#  - debug: msg="{{item.item}}"
+#    with_items: task.results
+
+- hosts: localhost
+  remote_user: root
+
+  vars:
+  with_items:
+   - mysql-server
+
+  tasks:
+  - apt: pkg {{item}} state=installed
+    with_items:
+     - elinks
+     - wget
+    register: task
+  - debug: msg="{{item.item}}"
+    with_items: task.results
+
