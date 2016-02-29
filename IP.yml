@@ -5,5 +5,13 @@
   tasks:
 
   - name: Capture Defaulte gateway
+<<<<<<< HEAD
     template: src=/etc/ansible/roles/common/templates/profile.j2 dest=/root/.profile
+=======
+    template: src=/etc/ansible/roles/common/templates/TEST.j2 dest=/root/TEST.cfg
+    
+    
+#{{ ansible_eth0['ipv4']['address'] }}:80
+
+>>>>>>> 8272bf320440214e84fc0f5d3f51a3e5f5b6c3ae
  
